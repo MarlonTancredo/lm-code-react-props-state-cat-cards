@@ -1,18 +1,12 @@
 import PetImage from "./pet_image";
+import { PetImageProps } from "./pet_image";
 
 interface PetCardProps {
   name: string;
   species: string;
   favFoods: string[];
   birthYear: number;
-  petImage: {
-    image: string;
-    altText: string;
-    licenseType: string;
-    licenseUrl: string;
-    attributionName?: string;
-    attributionUrl?: string;
-  };
+  petImage: PetImageProps;
 }
 
 const PetCard = ({
