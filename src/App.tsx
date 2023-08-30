@@ -15,25 +15,25 @@ function App(): JSX.Element {
       <Header />
       <main>
         <div className="cards__wrapper">
-          {catData.map((cat, index) => (
+          {catData.map(({ id, name, species, favFoods, birthYear }, index) => (
             <PetCard
-              key={cat.id}
-              name={cat.name}
-              species={cat.species}
-              favFoods={cat.favFoods}
-              birthYear={cat.birthYear}
+              key={id}
+              name={name}
+              species={species}
+              favFoods={favFoods}
+              birthYear={birthYear}
               petImage={catImages[index]}
             />
           ))}
         </div>
         <div className="cards__wrapper">
-          {dogData.map((dog, index) => (
+          {dogData.map(({ id, name, species, favFoods, birthYear }, index) => (
             <PetCard
-              key={dog.id}
-              name={dog.name}
-              species={dog.species}
-              favFoods={dog.favFoods}
-              birthYear={dog.birthYear}
+              key={id}
+              name={name}
+              species={species}
+              favFoods={favFoods}
+              birthYear={birthYear}
               petImage={catImages[index]}
             />
           ))}
