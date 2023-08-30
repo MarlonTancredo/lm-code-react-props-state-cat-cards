@@ -6,6 +6,7 @@ import PetCard from "./components/pet_card";
 import { catData } from "./data/cat-data";
 import { catImages } from "./data/cat-images-data";
 import { dogData } from "./data/dog-data";
+
 // import { dogImages } from "./data/dog-images-data"; //Must be created.
 
 function App(): JSX.Element {
