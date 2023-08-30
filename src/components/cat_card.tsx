@@ -4,7 +4,7 @@ import { images } from "../data/cat-images-data";
 interface CatProps {
   name: string;
   species: string;
-  favFoods: Array<string>;
+  favFoods: string[];
   birthYear: number;
   catIndex: number;
 }
@@ -19,7 +19,7 @@ const CatCard = ({
   <div className="card">
     <h3 className="card__text card__header">{name}</h3>
     <p className="card__text">Species: {species}</p>
-    <p className="card__text">Favourite Food(s): {favFoods}</p>
+    <p className="card__text">Favorite Food(s): {favFoods}</p>
     <p className="card__text">Birth Year: {birthYear}</p>
     <CatImage
       image={images[catIndex].image}

@@ -3,14 +3,9 @@ import Navbar from "./components/navbar";
 import Header from "./components/header";
 import Footer from "./components/footer";
 import CatCard from "./components/cat_card";
-import { cats } from "./data/cat-data";
-
-import { v4 as uuidv4 } from "uuid";
+import { catData } from "./data/cat-data";
 
 function App(): JSX.Element {
-  const catData = cats;
-  catData.forEach((cat) => (cat.id = uuidv4()));
-
   return (
     <>
       <Navbar />
@@ -29,7 +24,6 @@ function App(): JSX.Element {
           ))}
         </div>
       </main>
-
       <Footer />
     </>
   );

@@ -1,4 +1,5 @@
 import Cat from "./cat";
+import { v4 as uuidv4 } from "uuid";
 
 export const cats: Array<Cat> = [
   {
@@ -74,3 +75,6 @@ export const cats: Array<Cat> = [
     birthYear: 2021,
   },
 ];
+
+export const catData = cats;
+cats.forEach((cat) => (cat.id = uuidv4()));
