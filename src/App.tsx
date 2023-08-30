@@ -25,8 +25,6 @@ function App(): JSX.Element {
               petImage={catImages[index]}
             />
           ))}
-        </div>
-        <div className="cards__wrapper">
           {dogData.map(({ id, name, species, favFoods, birthYear }, index) => (
             <PetCard
               key={id}
