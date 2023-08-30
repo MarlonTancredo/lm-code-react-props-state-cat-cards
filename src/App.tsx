@@ -27,7 +27,7 @@ function App(): JSX.Element {
         {/* Uncomment */}
         {/* <div className="cards__wrapper">
           {dogData.map((dog, index) => (
-            <CatCard
+            <PetCard
               key={dog.id}
               name={dog.name}
               species={dog.species}
