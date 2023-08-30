@@ -11,7 +11,7 @@ import cat10 from "../assets/images/cat10.jpg";
 import cat11 from "../assets/images/cat11.jpg";
 import cat12 from "../assets/images/cat12.jpg";
 
-export const images = [
+export const catImages = [
   {
     image: cat1,
     altText: "Describe this cat!",

@@ -1,12 +1,18 @@
 import PetImage from "./pet_image";
-import { images } from "../data/cat-images-data";
 
 interface PetCardProps {
   name: string;
   species: string;
   favFoods: string[];
   birthYear: number;
-  catIndex: number;
+  petImage: {
+    image: string;
+    altText: string;
+    licenseType: string;
+    licenseUrl: string;
+    attributionName?: string;
+    attributionUrl?: string;
+  };
 }
 
 const PetCard = ({
@@ -14,7 +20,7 @@ const PetCard = ({
   species,
   favFoods,
   birthYear,
-  catIndex,
+  petImage,
 }: PetCardProps) => (
   <div className="card">
     <h3 className="card__text card__header">{name}</h3>
@@ -22,12 +28,12 @@ const PetCard = ({
     <p className="card__text">Favorite Food(s): {favFoods}</p>
     <p className="card__text">Birth Year: {birthYear}</p>
     <PetImage
-      image={images[catIndex].image}
-      altText={images[catIndex].altText}
-      licenseType={images[catIndex].licenseType}
-      licenseUrl={images[catIndex].licenseUrl}
-      attributionName={images[catIndex].attributionName}
-      attributionUrl={images[catIndex].attributionUrl}
+      image={petImage.image}
+      altText={petImage.altText}
+      licenseType={petImage.licenseType}
+      licenseUrl={petImage.licenseUrl}
+      attributionName={petImage.attributionName}
+      attributionUrl={petImage.attributionUrl}
     />
   </div>
 );

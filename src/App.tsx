@@ -4,7 +4,9 @@ import Header from "./components/header";
 import Footer from "./components/footer";
 import PetCard from "./components/pet_card";
 import { catData } from "./data/cat-data";
-// import { dogData } from "./data/dog-data"; //An dog-images-data.ts must be created.
+import { catImages } from "./data/cat-images-data";
+import { dogData } from "./data/dog-data";
+// import { dogImages } from "./data/dog-images-data"; //Must be created.
 
 function App(): JSX.Element {
   return (
@@ -20,12 +22,11 @@ function App(): JSX.Element {
               species={cat.species}
               favFoods={cat.favFoods}
               birthYear={cat.birthYear}
-              catIndex={index}
+              petImage={catImages[index]}
             />
           ))}
         </div>
-        {/* Uncomment */}
-        {/* <div className="cards__wrapper">
+        <div className="cards__wrapper">
           {dogData.map((dog, index) => (
             <PetCard
               key={dog.id}
@@ -33,10 +34,10 @@ function App(): JSX.Element {
               species={dog.species}
               favFoods={dog.favFoods}
               birthYear={dog.birthYear}
-              catIndex={index}
+              petImage={catImages[index]}
             />
           ))}
-        </div> */}
+        </div>
       </main>
       <Footer />
     </>

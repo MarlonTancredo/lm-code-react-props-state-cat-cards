@@ -1,4 +1,4 @@
-interface PetImageProps {
+export interface PetImageProps {
   image: string;
   altText: string;
   licenseType: string;
