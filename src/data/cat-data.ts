@@ -76,5 +76,5 @@ export const cats: Array<Pet> = [
   },
 ];
 
-export const catData = cats;
 cats.forEach((cat) => (cat.id = uuidv4()));
+export const catData = cats;

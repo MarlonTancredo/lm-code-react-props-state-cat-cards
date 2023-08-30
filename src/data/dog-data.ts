@@ -22,5 +22,5 @@ export const dogs: Array<Animal> = [
   },
 ];
 
-export const dogData = dogs;
 dogs.forEach((dogs) => (dogs.id = uuidv4()));
+export const dogData = dogs;
