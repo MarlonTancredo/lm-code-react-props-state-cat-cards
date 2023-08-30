@@ -1,7 +1,7 @@
-import Cat from "./cat";
+import Pet from "./pet";
 import { v4 as uuidv4 } from "uuid";
 
-export const cats: Array<Cat> = [
+export const cats: Array<Pet> = [
   {
     name: "Little Miss Purrfect",
     species: "Cat",

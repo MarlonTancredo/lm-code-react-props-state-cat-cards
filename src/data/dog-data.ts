@@ -1,6 +1,6 @@
-import Dog from "./dog";
+import Animal from "./pet";
 
-export const dogs: Array<Dog> = [
+export const dogs: Array<Animal> = [
   {
     name: "Floofus",
     species: "Puppy",
