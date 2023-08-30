@@ -14,7 +14,14 @@ const PetCard = ({
   species,
   favFoods,
   birthYear,
-  petImage,
+  petImage: {
+    image,
+    altText,
+    licenseType,
+    licenseUrl,
+    attributionName,
+    attributionUrl,
+  },
 }: PetCardProps) => (
   <div className="card">
     <h3 className="card__text card__header">{name}</h3>
@@ -22,12 +29,12 @@ const PetCard = ({
     <p className="card__text">Favorite Food(s): {favFoods}</p>
     <p className="card__text">Birth Year: {birthYear}</p>
     <PetImage
-      image={petImage.image}
-      altText={petImage.altText}
-      licenseType={petImage.licenseType}
-      licenseUrl={petImage.licenseUrl}
-      attributionName={petImage.attributionName}
-      attributionUrl={petImage.attributionUrl}
+      image={image}
+      altText={altText}
+      licenseType={licenseType}
+      licenseUrl={licenseUrl}
+      attributionName={attributionName}
+      attributionUrl={attributionUrl}
     />
   </div>
 );
