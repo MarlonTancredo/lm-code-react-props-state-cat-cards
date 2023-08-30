@@ -33,7 +33,7 @@ function App(): JSX.Element {
               species={species}
               favFoods={favFoods}
               birthYear={birthYear}
-              petImage={catImages[index]}
+              petImage={catImages[index]} //Change to dogImages
             />
           ))}
         </div>
