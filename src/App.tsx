@@ -5,23 +5,19 @@ import Footer from "./components/footer";
 import CatCard from "./components/cat_card";
 import { cats } from "./data/cat-data";
 
-import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 function App(): JSX.Element {
   const catData = cats;
   catData.forEach((cat) => (cat.id = uuidv4()));
 
-  const [catsState, setCatsState] = useState(catData);
-
   return (
     <>
       <Navbar />
       <Header />
-
       <main>
         <div className="cards__wrapper">
-          {catsState.map((cat, index) => (
+          {catData.map((cat, index) => (
             <CatCard
               key={cat.id}
               name={cat.name}
